@@ -9,7 +9,7 @@ def main(req: func.HttpRequest) -> func.HttpResponse:
     bodydata = req.get_body().decode()
     header_uuid = req.headers.get('uuid')
     header_sk = req.headers.get('sk')
-    header_api_key = req.headers.get('api_key')
+    header_api_key = req.headers.get('api-key')
     
     if not bodydata:
         return func.HttpResponse(
@@ -31,7 +31,7 @@ def main(req: func.HttpRequest) -> func.HttpResponse:
     
     if not header_api_key:
         return func.HttpResponse(
-            "requied header api_key",
+            "requied header api-key",
             status_code=400
         )
 
