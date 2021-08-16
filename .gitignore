@@ -6,7 +6,6 @@ host.json
 local.settings.json
 proxies.json
 
-# github workflow 除外
-.github/
+
 
 
