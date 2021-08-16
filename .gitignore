@@ -1,0 +1,12 @@
+# Azure Functions Debug 用イメージデータ除外
+.venv/
+.vscode/
+.funcignore
+host.json
+local.settings.json
+proxies.json
+
+# github workflow 除外
+.github/
+
+
