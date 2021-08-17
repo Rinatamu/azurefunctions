@@ -41,10 +41,7 @@ def main(req: func.HttpRequest) -> func.HttpResponse:
             bodyjson=req.get_json()
         except ValueError:
             pass
-        #print(bodydata)
-        #print(json.loads(bodydata))
 
-        #rtn=SESAME(bodyjson['uuid'],bodyjson['sk'],bodyjson['api_key'],bodyjson['cmd'],bodyjson['history'])
         rtn=SESAME(header_uuid,header_sk,header_api_key,bodyjson['cmd'],bodyjson['history'])
 
         return func.HttpResponse(rtn)
